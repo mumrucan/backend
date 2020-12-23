@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "urunlers",
+  "info": {
+    "name": "Urunler",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "UrunAdi": {
+      "type": "string"
+    },
+    "Gorsel": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "urunaciklama": {
+      "type": "text"
+    }
+  }
+}
